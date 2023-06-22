@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +30,50 @@ html,body{
     height: 100%;
     z-index: 1;
 } */
+#game-controls{
+    position: absolute;
+    /* border: 2px solid blue; */
+    top: 5%;
+    left: 10%;
+    display: flex;
+    gap: 2px;
+    /* width: 150px; */
+}
+#game-controls #start-game{
+    padding: 7px 14px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: larger;
+}
+#game-controls #start-game:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+#start-game:hover{
+    cursor: pointer;
+}
+#game-controls #mute-btn{
+    /* background-color: transparent; */
+    border-radius: 5px;
+    border: none;
+    /* border: 2px solid red; */
+    padding: 7px 14px;
+    display: flex;
+    justify-content: center;
+}
+#game-controls #mute-btn:hover{
+    cursor: pointer;
+}
+#game-controls #mute-btn:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+#game-controls #mute-btn img{
+    height: 100%;
+    /* padding: 7px 14px; */
+}
 #game-board{
     /* background-color: azure; */
     height: 90%;
@@ -71,4 +116,37 @@ html,body{
 
 #game-board .memory-card.flip{
     transform: rotateY(180deg);
+}
+
+#game-score{
+    position: absolute;
+    left: 70%;
+    top: 8%;
+    font-family:'Roboto Mono', monospace;
+    /* border:5px groove rgba(0, 128, 0, 0.636); */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+}
+#game-score p{
+    padding:5px 10px;
+    /* border: 3px solid red; */
+    font-size: larger;
+    font-weight: 700;
+    
+}
+#game-score #hints-btn{
+    padding: 5px 10px;
+    font-family:'Roboto Mono', monospace;
+    font-size: larger;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    /* border: 3px solid blue; */
+}
+
+#game-score #hints-btn:active{
+    transform: scale(0.97);
+    transition: transform .1s;
 }

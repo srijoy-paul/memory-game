@@ -15,6 +15,14 @@
         loop
         muted
       ></video>
+
+      <div id="game-controls">
+        <button id="start-game">Start</button>
+        <button id="mute-btn">
+          <img src="./images/volume-up.svg" alt="" />
+        </button>
+      </div>
+
       <section id="game-board">
         <div class="memory-card" data-technology="github">
           <img class="front-face" src="./images/github.svg" alt="" />
@@ -256,6 +264,13 @@
             style="background-color: #f7df1e"
           />
         </div>
+      </section>
+
+      <section id="game-score">
+        <button id="hints-btn">
+          Power-ups 🚀 <span id="hints-left"></span>
+        </button>
+        <p>Score: <span id="score-container">0</span></p>
       </section>
     </section>
     <script src="scripts.js"></script>
