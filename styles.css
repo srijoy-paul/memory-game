@@ -62,6 +62,8 @@ html,body{
     padding: 7px 14px;
     display: flex;
     justify-content: center;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
 }
 #game-controls #mute-btn:hover{
     cursor: pointer;
@@ -73,6 +75,39 @@ html,body{
 #game-controls #mute-btn img{
     height: 100%;
     /* padding: 7px 14px; */
+}
+/* #game-controls #mute-btn::before{
+    background-color: #333;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    bottom: 0;
+    left: 57%;
+    transform: translate(0, calc(100% + 4px)) rotate(45deg);
+}
+#game-controls #mute-btn:hover::before {
+    display: block;
+} */
+#game-controls #mute-btn::after{
+    background-color: #333;
+    /* border-radius: 3px; */
+    color: #fff;
+    display: none;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    z-index:999;
+    content: 'Tap to mute/unmute';
+    bottom: 0;
+    left: 50%;
+    transform: translate(0, calc(100% + 2px));
+    white-space: nowrap;
+}
+#game-controls #mute-btn:hover::after{
+    display: block;
 }
 #game-board{
     /* background-color: azure; */
@@ -139,6 +174,30 @@ html,body{
     border-radius: 5px;
     /* border: 3px solid blue; */
     white-space: nowrap;
+    position: relative;
+}
+#game-score #hints-btn:hover{
+    cursor: pointer;
+}
+#game-score #hints-btn::after{
+    background-color: #333;
+    /* border-radius: 3px; */
+    color: #fff;
+    display: none;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    font-size: small;
+    font-weight: 400;
+    z-index:999;
+    content: 'Find the other card';
+    bottom: 0;
+    left: 50%;
+    transform: translate(0, calc(100% + 2px));
+    white-space: nowrap;
+}
+#game-score #hints-btn:hover::after{
+    display: block;
 }
 
 #game-score #hints-btn:active{
